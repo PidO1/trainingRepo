@@ -1,30 +1,54 @@
-Page({
-  onLoad(query) {
-    // 页面加载
-    console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
+Page( {
+  data: {
+
+    diaryActive: "",
+    mealsActive: "",
+    todoActive: "",
+    notesActive: "",
+    shopActive: "",
   },
-  onReady() {
+  onLoad ( query )
+  {
+    // 页面加载
+    console.info( `Page onLoad with query: ${ JSON.stringify( query ) }` );
+
+
+  },
+  onReady ()
+  {
     // 页面加载完成
   },
-  onShow() {
+  onShow ()
+  {
     // 页面显示
   },
-  onHide() {
+  onHide ()
+  {
     // 页面隐藏
   },
-  onUnload() {
+  onUnload ()
+  {
     // 页面被关闭
   },
-  onTitleClick() {
+  onTitleClick ()
+  {
     // 标题被点击
   },
-  onPullDownRefresh() {
+  onPullDownRefresh ()
+  {
     // 页面被下拉
   },
-  onReachBottom() {
+  onReachBottom ()
+  {
     // 页面被拉到底部
   },
-  onShareAppMessage() {
+  onClick ( event )
+  {
+
+    console.log( event )
+  },
+  onShareAppMessage ()
+  {
     // 返回自定义分享信息
     return {
       title: 'My App',
@@ -32,4 +56,4 @@ Page({
       path: 'pages/index/index',
     };
   },
-});
+} );

@@ -1,0 +1,19 @@
+<view class="footer">
+  <view class="footerInnerContainer">
+    <view class="footerBtn {{diaryActive}}" onTap="buttonClick" id=1>
+        Diary
+    </view>
+    <view class="footerBtn   {{mealsActive}}" onTap="buttonClick" id=2>
+        Meals
+    </view>
+    <view class="footerBtn {{todoActive}}" onTap="buttonClick" id=3>
+        To DO
+    </view>
+    <view class="footerBtn {{notesActive}}" onTap="buttonClick" id=4>
+        Notes
+    </view>
+    <view class="footerBtn {{shopActive}}" onTap="buttonClick" id=5>
+        Shop
+    </view>
+  </view>
+</view>
