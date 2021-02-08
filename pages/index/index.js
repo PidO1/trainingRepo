@@ -1,6 +1,7 @@
 Page( {
   data: {
-
+    addTodoText: "",
+    showInput: false,
     diaryActive: "",
     mealsActive: "",
     todoActive: "",
@@ -19,14 +20,7 @@ Page( {
         text: "Something to do 3",
         selected: "radioInner"
       },
-      {
-        text: "Something to do 4",
-        selected: "radioInner"
-      },
-      {
-        text: "Something to do 5",
-        selected: "radioInner"
-      },
+
 
     ]
   },
@@ -36,6 +30,34 @@ Page( {
     console.info( `Page onLoad with query: ${ JSON.stringify( query ) }` );
 
 
+  },
+  onItemInput ( event )
+  {
+    this.setData( {
+      addTodoText: event.detail.value
+    } )
+    console.log( event )
+
+  },
+  addTodo ( event )
+  {
+    this.setData( {
+      showInput: true
+    } )
+
+  },
+  addNow ()
+  {
+    this.data.toDos.push( {
+      text: this.data.addTodoText,
+      selected: ""
+    } )
+
+    this.setData( {
+      toDos: this.data.toDos,
+      showInput: false
+
+    } )
   },
   onReady ()
   {

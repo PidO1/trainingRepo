@@ -16,6 +16,19 @@
         <text class="toDoText">{{item.text}}</text>
       </view>
     </block>
+    <view a:if="{{showInput}}" class="container-item">
+      <input onInput="onItemInput" placeholder="TO DO" />
+    </view>
+    <view a:if="{{showInput}}" class="container-item">
+      <view class="addNow" onTap="addNow">
+      Add
+      </view>
+    </view>
+    <view class=" container-item">
+      <view a:if="{{!showInput}}" class="addBtn" onTap="addTodo">
+        <image mode="widthFix" src="../../assets/plus.png"/>
+      </view>
+    </view>
   </view>
   <!-- Footer component -->
   <footer onClick="onClick"></footer>
