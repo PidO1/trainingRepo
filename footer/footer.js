@@ -3,7 +3,7 @@ Component( {
   data: {
     diaryActive: "",
     mealsActive: "",
-    todoActive: "",
+    todoActive: "footerBtnActive",
     notesActive: "",
     shopActive: "",
   },
@@ -26,6 +26,7 @@ Component( {
           notesActive: "",
           shopActive: "",
         } )
+        //navigate to various pages
       }
       if ( event.currentTarget.id === "2" )
       {
