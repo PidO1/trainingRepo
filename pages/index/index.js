@@ -6,6 +6,29 @@ Page( {
     todoActive: "",
     notesActive: "",
     shopActive: "",
+    toDos: [
+      {
+        text: "Something to do",
+        selected: ""
+      },
+      {
+        text: "Something to do 2",
+        selected: "radioInner"
+      },
+      {
+        text: "Something to do 3",
+        selected: "radioInner"
+      },
+      {
+        text: "Something to do 4",
+        selected: "radioInner"
+      },
+      {
+        text: "Something to do 5",
+        selected: "radioInner"
+      },
+
+    ]
   },
   onLoad ( query )
   {
@@ -37,6 +60,27 @@ Page( {
   onPullDownRefresh ()
   {
     // 页面被下拉
+  },
+  setSelected ( event )
+  {
+    if ( ( this.data.toDos[ event.currentTarget.id ].selected ) === "" )
+    {
+      this.data.toDos[ event.currentTarget.id ].selected = "radioInner"
+
+      this.setData( {
+        toDos: this.data.toDos
+      } )
+    }
+    else
+    {
+      this.data.toDos[ event.currentTarget.id ].selected = ""
+      this.setData( {
+        toDos: this.data.toDos
+      } )
+    }
+
+
+    console.log( this.data.toDos[ event.currentTarget.id ].selected )
   },
   onReachBottom ()
   {

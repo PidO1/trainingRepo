@@ -7,20 +7,15 @@
       <text class="top-text">To Do List</text>
     </view>
     <!-- Card Todo -->
-    <view class="cardTodo">
-      <view class="radioOuter">
-        <view class="radioInner">
+    <block a:for="{{toDos}}" a:for-index="idx">
+      <view id="{{idx}}" onTap="setSelected" class="cardTodo">
+        <view class="radioOuter">
+          <view class="{{item.selected}}">
+          </view>
         </view>
+        <text class="toDoText">{{item.text}}</text>
       </view>
-      <text class="toDoText">To DO item</text>
-    </view>
-    <view class="cardTodo">
-      <view class="radioOuter">
-        <view class="radioInner">
-        </view>
-      </view>
-      <text class="toDoText">To DO item That has to be really extrememly tested to ensure thatthe overflow of teh method actually woreks the way it was intended to work and to ensure it handles the way it is supposed to handled</text>
-    </view>
+    </block>
   </view>
   <!-- Footer component -->
   <footer onClick="onClick"></footer>
